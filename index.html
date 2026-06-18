@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>ASTEROIDS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="screen-wrap">
+    <canvas id="gameCanvas"></canvas>
+    <div id="crt-overlay"></div>
+    <div id="scanlines"></div>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="overlay">
+      <div class="overlay-content">
+        <div class="title-block">
+          <p class="subtitle">- SECTOR 7 ALERT -</p>
+          <h1 class="game-title">ASTEROIDS</h1>
+          <p class="subtitle">PLANET DESTROYER EDITION</p>
+        </div>
+        <div class="mission-brief">
+          <p>MISSION: DESTROY THE PLANET</p>
+          <p>TO UNLOCK ACCESS</p>
+        </div>
+        <div class="controls-block">
+          <p class="ctrl-heading">— CONTROLS —</p>
+          <div class="ctrl-grid">
+            <span>← →</span><span>ROTATE</span>
+            <span>↑</span><span>THRUST</span>
+            <span>SPACE</span><span>FIRE</span>
+          </div>
+        </div>
+        <p class="blink press-start">PRESS SPACE TO START</p>
+        <p class="copyright">© 1979 ATARI INC.  TRIBUTE BUILD</p>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="overlay hidden">
+      <div class="overlay-content">
+        <h2 class="game-title">GAME OVER</h2>
+        <p id="final-score-label">SCORE: <span id="final-score">0</span></p>
+        <p class="blink press-start">PRESS SPACE TO RETRY</p>
+      </div>
+    </div>
+
+    <!-- Planet Destroyed Screen -->
+    <div id="win-screen" class="overlay hidden">
+      <div class="overlay-content">
+        <h2 class="game-title explode-text">PLANET</h2>
+        <h2 class="game-title explode-text">DESTROYED</h2>
+        <p id="win-score-label">SCORE: <span id="win-score">0</span></p>
+        <p class="redirecting blink">ACCESSING MAINFRAME...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
